@@ -1,0 +1,284 @@
+ /* *{
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    overflow: hidden;
+}
+
+.navbar {
+    margin: 0 45px;
+    margin-left: 8%;
+    margin-top: 2%;
+    height: 82px;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.5);;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin-left: 6%;
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: none;
+    z-index: 101;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: red;
+    padding-top: 10px;
+}
+
+.menu ul li {
+    width: 100%;
+
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu ul li a {
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.socials .icon {
+    margin-right: 20px;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 80vh;
+    margin-top: -7.5%;
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    height: 65vh;
+    position: relative;
+    margin: auto;
+
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+ */
+
+ * {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    overflow: hidden;
+    position: relative; /* Ensure proper positioning for child elements */
+}
+
+.navbar {
+    position: absolute; /* Position the navbar */
+    margin: 0 45px;
+    margin-left: 8%;
+    margin-top: 2%;
+    height: 82px;
+    width: 85%;
+    background-color: white; /* Adjust the background color and transparency as needed */
+    z-index: 1000; /* Ensure the navbar is on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin-left: 4%;
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 14px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: red;
+    padding-top: 10px;
+}
+
+.menu ul li {
+    width: 100%;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu ul li a {
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.socials .icon {
+    margin-right: 10px;
+}
+
+/* Carousel */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 95vh;
+    margin-top: 0; /* Adjust margin-top to ensure it starts below the navbar */
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the entire container */
+}
+
+/* Next & previous buttons */
+/* .prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust button background color and transparency */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust hover background color and transparency */
+} */
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
