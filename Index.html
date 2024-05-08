@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,14 +24,14 @@
             <ul class="menu" id="nav-links">
                 <li><a href="#">Home</a></li>
                 <li>
-                    <a href="#">About <i class="fa-solid fa-angle-down fa-xl"></i> </a>
+                    <a href="#">About <i class="fas fa-angle-down"></i> </a>
                     <ul>
                         <li><a href="#">The Firm</a></li>
                         <li><a href="#">Our Vision</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Services <i class="fa-solid fa-angle-down fa-xl"></i> </a>
+                    <a href="#">Services <i class="fas fa-angle-down"></i> </a>
                     <ul>
                         <li><a href="#">Audit & Assurance </a></li>
                         <li><a href="#">Risk Advisory </a></li>
@@ -45,7 +45,7 @@
                 </li>
                 <li><a href="#">Industries </a></li>
                 <li>
-                    <a href="#">Insight <i class="fa-solid fa-angle-down fa-xl"></i> </a>
+                    <a href="#">Insight <i class="fas fa-angle-down"></i> </a>
                     <ul>
                         <li><a href="#">Blogs</a></li>
                         <li><a href="#">Publications </a></li>
@@ -59,38 +59,157 @@
             <div class="socials">
                 <a href="#" class="icon"> <i class="fab fa-linkedin fa-xl" style="color: skyblue;"></i></a>
                 <a href="#" class="icon"><i class="fab fa-facebook fa-xl" style="color: #74C0FC;"></i></a>
-                <a href="#" class="icon"><i class="fab fa-twitter fa-xl" style="color: white;"></i></a>
+                <a href="#" class="icon"><i class="fab fa-twitter fa-xl" style="color: black;"></i></a>
             </div>
         </div>
 
         <!-- Carousel -->
-        <div class="slideshow-container">
-
-            <div class="mySlides ">
-                <img src="./Assets/Its-not-about-Ideas-scaled.jpg">
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="slide-image" style="background-image: url(./Assets/Its-not-about-Ideas-scaled.jpg);">
+                    <div class="text-overlay">
+                        <h1>Gopal J Agrawal & Company</h1>
+                        <h4>Trust, Value & Commitment</h4>
+                        <button> Contact Us</button>
+                    </div>
+                </div>
             </div>
-
-            <div class="mySlides ">
-                <img src="./Assets/pexels-fauxels-3182773.jpg.jpg">
+            <div class="carousel-item">
+                <div class="slide-image" style="background-image: url(./Assets/pexels-fauxels-3182773.jpg.jpg);">
+                    <div class="text-overlay">
+                        <h1>Young Professionals Talent & Exceptional Client Services</h1>
+                        <button> Contact Us</button>
+                    </div>
+                </div>
             </div>
+            <div class="carousel-item">
 
-            <div class="mySlides ">
-                <img src="./Assets/Young-professional-talents-scaled.jpg">
+                <div class="slide-image" style="background-image: url(./Assets/Young-professional-talents-scaled.jpg);">
+                    <div class="text-overlay">
+                        <h1>It's Not About Ideas <br> It's About Making Ideas Happen</h1>
+                        <button> Contact Us</button>
+                    </div>
+                </div>
             </div>
-
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-
         </div>
-        <br>
 
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+
+        <div id="main-content">
+            <h2> Gopal J Agrawal & Company </h2>
+            <h4> Over 80 years of servicing the industry </h4>
+            <p> JC Bhalla & Company was founded in 1943 as a public accounting and audit practice. It has since
+                expanded
+                to
+                cover a wide array of tax litigation, tax advisory, assurance, and other financial advisory
+                services.
+            </p>
+            <div class="btn">
+                <a href="#" target="_blank">
+                    Read More
+                </a>
+            </div>
+        </div>
+        
+        <div class="content4">
+            <div class="fouth-content">
+                <h2> REASON TO CHOOSE RJA</h2>
+            </div>
+
+            <div class="grid-container">
+                <div class="three-part">
+                    <img src="./assets/Pic1.png">
+                    <h2> Client Confidentiality </h2>
+                    <p> All the information related to any client<br> is considerd Confidential and never be <br>
+                        disclosed
+                        to anyone</p>
+                </div>
+
+                <div class="three-part">
+                    <img src="./assets/ubuntu.png">
+                    <h2> Backed by Experience </h2>
+                    <p> Having years of experience in respective areas <br>
+                        and backed by skilled and experienced workforce<br>
+                        keep us ahead</p>
+                </div>
+
+                <div class="three-part">
+                    <img src="./assets/pic3.png">
+                    <h2> Customer Supoort</h2>
+                    <p> The key to good customer service is building <br>
+                        good relationships with clients and ensure a great <br> impression </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container4">
+            <div class="last">
+                <img src="./assets/logo.jpg">
+                <p>Established in the year 2021 is an emergingprofessional <br>
+                    services organisation involved in differentservice domains <br>
+                    including Audit &Assurance, Risk Advisory, Tax Advisory,<br>
+                    Corporate Advisory and Business Process Outsourcing<br>
+                    etc. Our client network spreads across the globe building<br> everlasting
+                    relationships based on trust and satisfaction</p>
+            </div>
+            <div id="grid-container2">
+                <div class="links">
+
+                    <h1> Quick Links</h1>
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Insights</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Firm Profile</a>
+
+                </div>
+
+                <div class="links">
+
+                    <h1> Social Links </h1>
+                    <a href="#"><i class="fab fa-linkedin fa-2xl" style="color: skyblue;"></i></a>
+                    <a href="#"><i class="fab fa-facebook fa-2xl" style="color: #74C0FC;"></i></a>
+                    <a href="#"> <i class="fab fa-twitter fa-2xl" style="color: black;"> </i> </a>
+
+                </div>
+                <div class="links">
+                    <h1> Services </h1>
+                    <a href="#">Audit & Assurance </a>
+                    <a href="#">Risk Advisory </a>
+                    <a href="#">Taxation Advisory </a>
+                    <a href="#">Corporate Advisory </a>
+                    <a href="#">Corporate Finance </a>
+                    <a href="#">Transaction Advisory </a>
+                    <a href="#">Outsourcing </a>
+                    <a href="#">Miscellaneous </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-partition">
+                <p> <i class="fa-solid fa-location-dot"></i> B - 20, Sector - 1, Noida, 201301, Uttar Pradesh, India
+                </p>
+            </div>
+            <div class="footer-partition">
+                <p><i class="fa-regular fa-envelope"></i> anshit@asasso.in</p>
+                <p><i class="fa-regular fa-envelope"></i> info@asasso.in</p>
+            </div>
+
+            <div class="footer-partition">
+                <p> <i class="fa-solid fa-phone"></i> +91-1203272284 </p>
+                <p> <i class="fa-solid fa-phone"></i> +91-9996847202 | +91-8560801303</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p> Copyright &copy; 2024 All Right Reserved | Powered by Kartgen Infotech LLP </p>
         </div>
 
     </div>
+
+
+
+
     </div>
 
     <script src="Script.js"></script>

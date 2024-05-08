@@ -1,165 +1,28 @@
- /* *{
+* {
     padding: 0;
     margin: 0;
+
 }
+
 
 #main {
     overflow: hidden;
+    position: relative;
+    /* Ensure proper positioning for child elements */
 }
 
 .navbar {
+    position: absolute;
+    /* Position the navbar */
     margin: 0 45px;
     margin-left: 8%;
     margin-top: 2%;
     height: 82px;
     width: 85%;
-    background-color: rgba(255, 255, 255, 0.5);;
+    background-color: white;
+    /* Adjust the background color and transparency as needed */
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    margin-left: 6%;
-    position: relative;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    display: block;
-    padding: 14px 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.menu ul {
-    display: none;
-    z-index: 101;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: red;
-    padding-top: 10px;
-}
-
-.menu ul li {
-    width: 100%;
-
-}
-
-.menu li:hover ul {
-    display: block;
-}
-
-.menu ul li a {
-    padding: 10px 20px;
-    color: white;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-    margin-left: 10px;
-}
-
-.socials {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-}
-
-.socials .icon {
-    margin-right: 20px;
-}
-
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
-    height: 80vh;
-    margin-top: -7.5%;
-    vertical-align: middle;
-}
-
-.slideshow-container {
-    max-width: 100%;
-    height: 65vh;
-    position: relative;
-    margin: auto;
-
-}
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
- */
-
- * {
-    padding: 0;
-    margin: 0;
-}
-
-#main {
-    overflow: hidden;
-    position: relative; /* Ensure proper positioning for child elements */
-}
-
-.navbar {
-    position: absolute; /* Position the navbar */
-    margin: 0 45px;
-    margin-left: 8%;
-    margin-top: 2%;
-    height: 82px;
-    width: 85%;
-    background-color: white; /* Adjust the background color and transparency as needed */
-    z-index: 1000; /* Ensure the navbar is on top */
+    /* Ensure the navbar is on top */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,16 +47,19 @@
 }
 
 .menu ul {
+    width: 145%;
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: red;
+    background-color: white;
     padding-top: 10px;
 }
 
 .menu ul li {
-    width: 100%;
+    width: 120%;
+    list-style: none;
+
 }
 
 .menu li:hover ul {
@@ -202,7 +68,7 @@
 
 .menu ul li a {
     padding: 10px 20px;
-    color: white;
+    color: black;
 }
 
 .logo img {
@@ -221,64 +87,283 @@
     margin-right: 10px;
 }
 
-/* Carousel */
-.slideshow-container {
+.slide-image {
     position: relative;
-    max-width: 100%;
-    height: 95vh;
-    margin-top: 0; /* Adjust margin-top to ensure it starts below the navbar */
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images cover the entire container */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Next & previous buttons */
-/* .prev,
-.next {
-    cursor: pointer;
+.text-overlay {
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust button background color and transparency */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    margin: 0 auto;
+    animation: slideIn 3s forwards;
+    z-index: 1;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust hover background color and transparency */
-} */
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.text-overlay button {
+    width: 200px;
+    height: 59px;
+    padding: 10px 50px;
+    font-size: 19px;
+    margin-top: 5%;
+    color: white;
+    background-color: #293241;
+    height: 8%;
 }
 
-.active,
-.dot:hover {
-    background-color: #717171;
+.text-overlay h1,
+.text-overlay h4 {
+    margin: 0;
+    color: black;
+    z-index: 1;
+    /* Ensure the text is above the background image */
+}
+
+.text-overlay h1 {
+    font-size: 50px;
+    /* Adjust the font size as needed */
+}
+
+.text-overlay h4 {
+    font-size: 40px;
+    /* Adjust the font size as needed */
+}
+
+#main-content {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 50px;
+    color: #000000;
+}
+
+#main-content h2 {
+    color: #2e363A;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+}
+
+#main-content h4 {
+    color: #2e363A;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+}
+
+#main-content p {
+    color: #6F6b6b;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    margin-left: 46%;
+    margin-top: 2rem;
+    width: 6%;
+    padding: 1rem 1rem;
+    border-radius: 0.3em;
+    transition: 0.3s;
+    background: #EA8537;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.btn:hover {
+    background: #3A526A;
+}
+
+.fouth-content h2 {
+    margin-top: 4%;
+    text-align: center;
+    /* Center text horizontally */
+    height: 10vh;
+    /* Adjust as needed */
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center verticall */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Adjust spacing between grid items */
+    margin-left: 50px;
+}
+
+
+.three-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+
+}
+
+/* Style for images */
+.three-part img {
+    height: 40%;
+    /* Adjust image height as needed */
+    max-width: 100%;
+    /* Ensure images don't exceed container width */
+
+}
+
+.three-part {
+    justify-content: center;
+
+}
+
+.last img {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.last p {
+    margin-left: 10%;
+}
+
+.container4 {
+    display: flex;
+}
+
+#grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    /* Three link sections and one main content section */
+    gap: 100px;
+    /* Adjust gap between sections as needed */
+    margin-left: 10%;
+    justify-content: center;
+
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.links a {
+    text-decoration: none;
+    margin-top: 12%;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.links:nth-child(2) a {
+    margin-bottom: 40px;
+    /* Add space between social media icons */
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 4;
+    /* Span from the fourth column to the end */
+}
+
+
+.footer {
+    margin-top: 3%;
+    display: grid;
+    background-color: lightgray;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal columns */
+    gap: 20px;
+    /* Adjust the gap between partitions */
+}
+
+.footer-partition {
+    margin-left: 10%;
+    padding: 5px;
+    /* Add padding to each partition */
+    /* Add borders for better separation */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.footer-partition p {
+    margin: 1.5%;
+    /* Remove default margin for paragraphs */
+
+}
+
+.copyright {
+    width: 100%;
+    background-color: #7ca4cd;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+/* Define the animation */
+@keyframes slideIn {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: auto;
+    height: 95vh;
+    overflow: hidden;
+    background-color: #cdcdcd;
+}
+
+.carousel-item .slide-image {
+    width: auto;
+    height: 95vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    border: none;
+    top: 0;
+    left: 100%;
+}
+
+.carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.carousel-item div {
+    height: 100%;
 }

@@ -1,47 +1,22 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+window.onload = function () { 
+    let slides = document.getElementsByClassName('carousel-item'); 
+    let slideIndex = 0;
 
-// Auto play slideshow
-let slideInterval;
+    function addActive(slide) { 
+        slide.classList.add('active'); 
+    } 
 
-function startSlideInterval() {
-    slideInterval = setInterval(function () {
-        plusSlides(1);
-    }, 2000); // Change 2000 to the desired interval in milliseconds (e.g., 3000 for 3 seconds)
-}
+    function removeActive(slide) { 
+        slide.classList.remove('active'); 
+    } 
 
-function stopSlideInterval() {
-    clearInterval(slideInterval);
-}
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    function showSlide(index) {
+        removeActive(slides[slideIndex]);
+        slideIndex = (index + slides.length) % slides.length; // Ensure the index wraps around
+        addActive(slides[slideIndex]);
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
 
-// Start autoplay when the page loads
-window.onload = startSlideInterval;
-
-// Pause autoplay when the user interacts with the slideshow
-document.querySelectorAll('.prev, .next, .dot').forEach(function (element) {
-    element.addEventListener('click', stopSlideInterval);
-});
+    setInterval(function () { 
+        showSlide(slideIndex + 1);
+    }, 1500); // Adjust the interval speed (milliseconds)
+};
